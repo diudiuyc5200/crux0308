@@ -2927,6 +2927,10 @@ static int __init zram_init(void)
 		num_devices--;
 	}
 
+	#ifdef CONFIG_HSWAP
+	num_devices = prev_num_devices;
+#endif
+	
 #ifdef CONFIG_ZRAM_WRITEBACK
 	WARN_ON(cgroup_add_legacy_cftypes(&memory_cgrp_subsys, memsw_files));
 #endif
