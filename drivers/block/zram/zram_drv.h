@@ -183,5 +183,7 @@ static inline void zram_set_entry(struct zram *zram, u32 index, unsigned long ha
 {
     zram->table[index].handle = handle;
 }
-
+#ifdef CONFIG_HSWAP
+extern int zram0_free_size(void);
+#endif
 #endif /* _ZRAM_DRV_H_ */
