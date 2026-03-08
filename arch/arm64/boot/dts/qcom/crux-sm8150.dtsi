@@ -291,7 +291,7 @@ And public attribution of xiaomi platforms(like F1X and so and)
 	qcom,fg-esr-timer-chg-slow = <0 96>;
 	qcom,fg-esr-timer-dischg-slow = <0 96>;
 	qcom,fg-esr-cal-soc-thresh = <26 230>;
-	qcom,fg-esr-cal-temp-thresh = <10 40>;
+	qcom,fg-esr-cal-temp-thresh = <10 50>;
 };
 
 &vendor {
@@ -317,11 +317,11 @@ And public attribution of xiaomi platforms(like F1X and so and)
 &pm8150b_charger {
 	qcom,cp-mode = <2>;
 	qcom,sec-charger-config = <1>;
-	qcom,usb-icl-ua = <4000000>;
-	qcom,fcc-max-ua = <8000000>;
-	qcom,fv-max-uv = <4480000>;
-	qcom,dc-icl-ua = <500000>;
-	qcom,auto-recharge-vbat-mv = <4380>;
+	qcom,usb-icl-ua = <6000000>;
+	qcom,fcc-max-ua = <10000000>;
+	qcom,fv-max-uv = <4350000>;
+	qcom,dc-icl-ua = <800000>;
+	qcom,auto-recharge-vbat-mv = <4300>;
 	qcom,step-charging-enable;
 	qcom,sw-jeita-enable;
 	qcom,chg-term-src = <1>;
@@ -448,7 +448,7 @@ And public attribution of xiaomi platforms(like F1X and so and)
 &pm8150b_pdphy {
 	vbus-supply = <&ext_5v_boost>;
 	mi,pd_curr_limit = <1>;
-	mi,pd_max_curr_limit = <4000000>;
+	mi,pd_max_curr_limit = <6000000>;
 };
 
 &usb0 {
