@@ -2914,6 +2914,10 @@ static int __init zram_init(void)
 		return -EBUSY;
 	}
 
+	#ifdef CONFIG_HSWAP
+	prev_num_devices = num_devices;
+#endif
+	
 	while (num_devices != 0) {
 		mutex_lock(&zram_index_mutex);
 		ret = zram_add();
