@@ -838,6 +838,18 @@ config HAVE_LOW_MEMORY_KILLER
 	  want page allocator to provide sufficient time before it triggers
 	  Out of Memory killer.
 
+config MULTIPLE_KSWAPD
+	bool "Spawn multiple kswapd threads"
+	default y
+	help
+	 kswapd_threads allows you to control the number of kswapd threads
+	 per node running on the system. The default value is 1 and the
+	 range of acceptible values are 1-16. The number of threads can
+	 be controlled by below command:
+	 (echo <num> > /proc/sys/vm/kswapd_threads)
+
+	 Values not in the range of 1..16 are ignored.
+
 config FORCE_ALLOC_FROM_DMA_ZONE
 	bool "Force certain memory allocators to always return ZONE_DMA memory"
 	depends on ZONE_DMA
