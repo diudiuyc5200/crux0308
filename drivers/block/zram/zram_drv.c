@@ -2887,7 +2887,10 @@ static struct cftype memsw_files[] = {
 static int __init zram_init(void)
 {
 	int ret;
-
+#ifdef CONFIG_HSWAP
+	unsigned int prev_num_devices;
+#endif
+	
 	ret = cpuhp_setup_state_multi(CPUHP_ZCOMP_PREPARE, "block/zram:prepare",
 				      zcomp_cpu_up_prepare, zcomp_cpu_dead);
 	if (ret < 0)
