@@ -37,7 +37,7 @@
 		qcom,mdss-dsi-lane-1-state;
 		qcom,mdss-dsi-lane-2-state;
 		qcom,mdss-dsi-lane-3-state;
-		qcom,mdss-brightness-max-level = <2047>;
+		qcom,mdss-brightness-max-level = <4095>;
 		qcom,bl-update-flag = "delay_until_first_frame";
 		qcom,mdss-dsi-dma-trigger = "trigger_sw";
 		qcom,mdss-dsi-mdp-trigger = "none";
@@ -103,7 +103,7 @@
 					39 00 00 00 00 00 02 B0 07
 					39 00 00 00 00 00 02 B7 91
 					39 01 00 00 01 00 03 F0 A5 A5];
-		qcom,mdss-dsi-dispparam-hbm-fod-off-command-state = "dsi_lp_mode";
+		qcom,mdss-dsi-dispparam-hbm-fod-off-command-state = "dsi_hs_mode";
 		qcom,mdss-dsi-dispparam-hbm-fod-on-command = [
 					39 00 00 00 00 00 03 F0 5A 5A
 					39 00 00 00 00 00 02 B0 03
@@ -113,7 +113,7 @@
 					39 00 00 00 00 00 03 B7 01 43
 					39 00 00 00 00 00 03 F0 A5 A5
 					39 01 00 00 01 00 02 53 E0];
-		qcom,mdss-dsi-dispparam-hbm-fod-on-command-state = "dsi_lp_mode";
+		qcom,mdss-dsi-dispparam-hbm-fod-on-command-state = "dsi_hs_mode";
 
 		/* WHITE POINT COMMAND */
 		qcom,mdss-dsi-panel-white-point-read-length = <8>;
@@ -649,7 +649,7 @@
 				qcom,mdss-dsi-v-top-border = <0>;
 				qcom,mdss-dsi-v-bottom-border = <0>;
 				qcom,mdss-dsi-panel-framerate = <90>;
-				qcom,mdss-dsi-panel-clockrate = <1650000000>;
+				qcom,mdss-dsi-panel-clockrate = <1500800000>;
 				qcom,mdss-dsi-panel-jitter = <0x5 0x1>;
 				qcom,mdss-dsi-on-command = [
 					39 00 00 00 00 00 03 F0 5A 5A
@@ -673,7 +673,7 @@
 
 					/* OSC frequency to 91.8M/89.8M */
 					39 00 00 00 00 00 02 B0 23
-					39 00 00 00 00 00 02 D1 2C
+					39 00 00 00 00 00 02 D1 0F
 					/*39 00 00 00 00 00 0C E9 11 55 A6 75 A3 A6 37 BE 00 1A B8*/
 					39 00 00 00 00 00 0C E9 11 55 A6 75 A3 A9 EB 71 00 1A B8
 					39 00 00 00 00 00 0C D9 14 00 00 8F 6E 00 00 8F 2E 6E 34
